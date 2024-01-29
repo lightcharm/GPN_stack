@@ -53,6 +53,22 @@ services:
     depends_on:
       - prometheus
 
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    command:
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
+      - '--storage.path=/alertmanager'
+    volumes:
+      - ./alertmanager:/etc/alertmanager
+    restart: always
+    networks:
+      - GPN-stack
+    ports:
+      - 9093:9093
+    depends_on:
+      - grafana
+
 networks:
   GPN-stack:
     name: GPN-stack
