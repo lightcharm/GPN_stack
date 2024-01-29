@@ -26,8 +26,8 @@ GF_SECURITY_ADMIN_PASSWORD=changeme
 GF_USERS_ALLOW_SIGN_UP=false
 ```
 
-We can select ready-made dashboards (4 units) in menu and view the data
+We can select ready-made dashboard (especially for node-exporter) in menu and view the data
 
 ***My plans:***
 * I'll add screenshots later
-* I'll make my dashboards later
+* I'll make my panels on dashboard later
